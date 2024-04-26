@@ -1,5 +1,3 @@
---index-url https://e61009:Axel2826!@artifactory-dogen.group.echonet/artifactory/api/pypi/pypi/simple
---trusted-host=artifactory-dogen.group.echonet
 flask
 pandas
 scikit-learn==1.2.2
