@@ -99,8 +99,8 @@ class Model:
         mean = self.df[feature_name].mean()
         std = self.df[feature_name].std()
         sns.histplot(self.df, x=feature_name, color='grey')
-        print(selected_client[feature_name])
-        print(mean)
+        # print(selected_client[feature_name])
+        # print(mean)
         ax.axvline(selected_client[feature_name], color="blue", linestyle='--', linewidth=2,
                    label='Client n° %s : %f' %(index, selected_client[feature_name]))
         ax.axvline(mean, color="black", linestyle='--', linewidth=2, label='Moyenne des clients : %f' % mean)
