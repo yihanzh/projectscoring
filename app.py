@@ -98,8 +98,9 @@ def shap_local():
 @app.route('/api/distribution_feature/', methods=['GET'])
 def distribution_feature():
     #  Parsing the http request to get arguments
+    index = int(request.args.get('index'))
     feature_name = request.args.get('feature_name')
-    image = model.distribution_feature(feature_name)
+    image = model.distribution_feature(index, feature_name)
     # Returning the processed data
     return image
 
