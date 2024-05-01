@@ -108,9 +108,10 @@ def distribution_feature():
 @app.route('/api/bivariate_plot/', methods=['GET'])
 def bivariate_plot():
     #  Parsing the http request to get arguments
+    index = int(request.args.get('index'))
     feature_name_x = request.args.get('feature_name_x')
     feature_name_y = request.args.get('feature_name_y')
-    image = model.bivariate_plot(feature_name_x, feature_name_y)
+    image = model.bivariate_plot(index, feature_name_x, feature_name_y)
     # Returning the processed data
     return image
 

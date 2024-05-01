@@ -123,14 +123,14 @@ class Model:
         plt.ylabel(feature_name_y)
         colors = ['red' if result == 1 else 'green' for result in self.predictions]
         plt.scatter(self.df[feature_name_x], self.df[feature_name_y], s=20, color=colors)
-        ax.scatter(selected_client[feature_name_x], selected_client[feature_name_y], s=200, marker='X', color='red' if self.predictions[index] == 1 else 'green',
+        ax.scatter(selected_client[feature_name_x], selected_client[feature_name_y], s=200, marker='X', color='blue',
                    label='Client n° %s' % index)
         custom_legend = [Line2D([0], [0], marker='o', color='red', label='Crédit refusé', markersize=5),
                         Line2D([0], [0], marker='o', color='green', label='Crédit accordé', markersize=5),
-                        Line2D([0], [0], marker='X', color='red' if self.predictions[index] == 1 else 'green',
+                        Line2D([0], [0], marker='X', color='blue',
                                label='Client n° %s : Crédit refusé' % index if self.predictions[index] == 1 else 'Client n° %s : Crédit accordé' % index,
                                 markersize=10)]
-        ax.legend(handles=custom_legend, loc='upper right')
+        ax.legend(handles=custom_legend, loc='center left', bbox_to_anchor=(1, 0.5))
         buffer = io.BytesIO()
         # fig.savefig('test.png')
         fig.savefig(buffer, format='png', bbox_inches='tight')

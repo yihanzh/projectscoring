@@ -106,9 +106,9 @@ def get_distribution_feature(select_index_, feature_):
 
 
 @st.cache_data
-def get_bivariate_plot(feature_x_, feature_y_):
+def get_bivariate_plot(select_index_, feature_x_, feature_y_):
     # URL of the probability API
-    url = api_url + "bivariate_plot/?feature_name_x=" + str(feature_x_) + "&" + "feature_name_y=" + str(feature_y_)
+    url = api_url + "bivariate_plot/?index=" + str(select_index_) + "&" + "feature_name_x=" + str(feature_x_) + "&" + "feature_name_y=" + str(feature_y_)
     r = requests.get(url)
     return Image.open(BytesIO(base64.b64decode(r.content)))
 
@@ -168,7 +168,7 @@ def main():
 
     st.image(get_distribution_feature(select_index, feature_x))
     st.image(get_distribution_feature(select_index, feature_y))
-    st.image(get_bivariate_plot(feature_x, feature_y))
+    st.image(get_bivariate_plot(select_index, feature_x, feature_y))
 
 
 if __name__ == '__main__':
