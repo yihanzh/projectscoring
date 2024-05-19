@@ -24,7 +24,7 @@ class Model:
 
     @staticmethod
     def load_data():
-        df = pd.read_csv('./data/test_x_1000.csv', header=0)
+        df = pd.read_csv('./data/X_eval_imputed.csv', header=0)
         df.replace({'FALSE': 0, 'TRUE': 1}, inplace=True)
         return df
 
