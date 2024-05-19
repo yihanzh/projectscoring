@@ -30,7 +30,7 @@ De plus, les chargés de relation client ont remonté le fait que les clients so
 - **Dossier dashboard** : dossier contenant les fichiers liés au fonctionnement du tableau de bord.
   - *dashboard.py* : Ce script Python est un tableau de bord interactif développé avec Streamlit pour visualiser les prédictions d'un modèle de scoring de crédit.
   - *setup_streamlit.sh* : Ce script Shell crée un fichier de configuration pour Streamlit, un outil utilisé pour développer des applications web en Python.
-  - *logo_pret_a_depenser.png* : image du logo de la société "Prêt à dépenser" utilisé dans le tableau de bord.
+  - *logo.png* : image du logo de la société "Prêt à dépenser" utilisé dans le tableau de bord.
 - **Dossier data_drift** : 
   - *data_drift_evidently.py* : Ce script Python utilise la bibliothèque Evidently pour détecter les dérives de données entre deux ensembles de données, généralement une référence (utilisée pour l'entraînement du modèle) et des données actuelles (en production).
 - **Dossier models** : les modèles de prédiction.
